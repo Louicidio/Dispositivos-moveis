@@ -62,15 +62,47 @@ void main() {
   print('Lista com numeros pares: $numerosPares');
   print('');
 
-  var pessoas = [
-    {'nome': 'Ana', 'idade': 20},
-    {'nome': 'Bruno', 'idade': 17},
-    {'nome': 'Luis', 'idade': 21},
+  // desafio
+  List<Pessoa> pessoas = [
+    Pessoa('Ana', 21, StatusIdade.adulto),
+    Pessoa('Bruno', 16, StatusIdade.adolescente),
+    Pessoa('Luis', 21, StatusIdade.adulto),
+    Pessoa('Eduardo', 22, StatusIdade.adulto),
+    Pessoa('Gabriel', 45, StatusIdade.adulto),
   ];
 
- // desafio
-  print('Maiores de idade:');
-  pessoas.where((p) => (p['idade'] as int) >= 18).forEach((p) {
-    print('${p['nome']} ${p['idade']}');
-  });
+  print('10:');
+  maioresDeIdadeList(pessoas);
+}
+
+enum StatusIdade {
+  adolescente,
+  adulto,
+  idoso
+}
+
+class Pessoa {
+  String nome;
+  int idade;
+  StatusIdade status;
+
+  Pessoa(this.nome, this.idade, this.status);
+
+  bool isMaiorDeIdade() {
+    return idade >= 18;
+  }
+
+  String toString() {
+    return '$nome (${idade} anos) - Status: ${status.name}';
+  }
+}
+
+
+void maioresDeIdadeList(List<Pessoa> pessoas) {
+  List<Pessoa> maioresDeIdade = pessoas.where((pessoa) => pessoa.isMaiorDeIdade()).toList();
+  
+  for (int i = 0; i < maioresDeIdade.length; i++) {
+    print('${maioresDeIdade[i].nome} = ${maioresDeIdade[i].idade} anos');
+  }
+
 }
