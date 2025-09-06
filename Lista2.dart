@@ -68,6 +68,7 @@ void main() {
     {'nome': 'Luis', 'idade': 21},
   ];
 
+ // desafio
   print('Maiores de idade:');
   pessoas.where((p) => (p['idade'] as int) >= 18).forEach((p) {
     print('${p['nome']} ${p['idade']}');
