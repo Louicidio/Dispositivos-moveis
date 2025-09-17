@@ -6,7 +6,7 @@ enum Naipe {
 }
 
 enum Valor {
-    AS, REI, DAMA, VALETE, 10, 9, 8, 7, 6, 5, 4, 3, 2
+    AS, REI, DAMA, VALETE, DEZ, NOVE, OITO, SETE, SEIS, CINCO, QUATRO, TRES, DOIS
 }
 
 class Card {
