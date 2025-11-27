@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795528405928",
+    "project_id": "appmanutencoes",
+    "storage_bucket": "appmanutencoes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795528405928:android:049caf6e686a92c959b39d",
+        "android_client_info": {
+          "package_name": "com.example.apk_mecanicofull"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoLlcLXL0Jr2dYilGWBwMPOkcdRfebNnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
